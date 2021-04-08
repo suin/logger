@@ -1,6 +1,6 @@
 {
   "name": "@suin/logger",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "A simple logger interface for backend apps.",
   "keywords": [
     "logger"
