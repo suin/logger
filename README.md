@@ -30,4 +30,4 @@ doSomething(console);
 
 ## API Reference
 
-https://suin.github.io/esa-exporter/
+https://suin.github.io/logger/

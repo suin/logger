@@ -5,13 +5,13 @@
   "keywords": [
     "logger"
   ],
-  "homepage": "https://github.com/suin/esa-exporter#readme",
+  "homepage": "https://github.com/suin/logger#readme",
   "bugs": {
-    "url": "https://github.com/suin/esa-exporter/issues"
+    "url": "https://github.com/suin/logger/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/suin/esa-exporter.git"
+    "url": "https://github.com/suin/logger.git"
   },
   "license": "MIT",
   "author": "suin <suinyeze@gmail.com>",
