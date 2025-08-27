@@ -1,6 +1,5 @@
 /node_modules
-*.js
-*.d.ts
-*.map
-!/types/**/*.d.ts
-/reference
+/js
+*.tsbuildinfo
+*.tgz
+/docs

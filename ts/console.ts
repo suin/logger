@@ -1,5 +1,5 @@
-import { Logger } from "./logger";
-import { Namespace } from "./namespace";
+import type { Logger } from "./logger.js";
+import { Namespace } from "./namespace.js";
 
 /**
  * @private
@@ -13,23 +13,23 @@ export class Console implements Logger {
     this.#console = options?.console ?? global.console;
   }
 
-  error(...args: unknown[]): void {
+  error(...args: Array<unknown>): void {
     this.#console.error(this.namespace, ...args);
   }
 
-  warn(...args: unknown[]): void {
+  warn(...args: Array<unknown>): void {
     this.#console.warn(this.namespace, ...args);
   }
 
-  info(...args: unknown[]): void {
+  info(...args: Array<unknown>): void {
     this.#console.info(this.namespace, ...args);
   }
 
-  log(...args: unknown[]): void {
+  log(...args: Array<unknown>): void {
     this.#console.log(this.namespace, ...args);
   }
 
-  debug(...args: unknown[]): void {
+  debug(...args: Array<unknown>): void {
     this.#console.debug(this.namespace, ...args);
   }
 

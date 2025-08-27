@@ -1,0 +1,4 @@
+{
+  "$schema": "./node_modules/@suin/biome.json/schema.json",
+  "extends": ["@suin/biome.json"]
+}

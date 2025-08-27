@@ -1,4 +1,4 @@
-export interface Logger {
+export type Logger = {
   error: Log;
   warn: Log;
   info: Log;
@@ -6,12 +6,12 @@ export interface Logger {
   log: Log;
 
   extend(name: string): Logger;
-}
+};
 
 export type Log = {
   (message: string, parameters?: object): void;
 
   (record: object): void;
 
-  (...args: unknown[]): void;
+  (...args: Array<unknown>): void;
 };

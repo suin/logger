@@ -1,41 +1,42 @@
-import { Console, GlobalConsole } from "./console";
-import { Logger } from "./logger";
+import { beforeEach, describe, expect, test } from "bun:test";
+import { Console, type GlobalConsole } from "./console.js";
+import type { Logger } from "./logger.js";
 
 class GlobalConsoleStub implements GlobalConsole {
   readonly logs: Array<{ readonly type: string; data: unknown }> = [];
 
-  debug(...data: unknown[]): void {
+  debug(...data: Array<unknown>): void {
     this.logs.push({ type: "debug", data });
   }
 
-  error(...data: unknown[]): void {
+  error(...data: Array<unknown>): void {
     this.logs.push({ type: "error", data });
   }
 
-  info(...data: unknown[]): void {
+  info(...data: Array<unknown>): void {
     this.logs.push({ type: "info", data });
   }
 
-  log(...data: unknown[]): void {
+  log(...data: Array<unknown>): void {
     this.logs.push({ type: "log", data });
   }
 
-  warn(...data: unknown[]): void {
+  warn(...data: Array<unknown>): void {
     this.logs.push({ type: "warn", data });
   }
 }
 
 type TestCase = [
   name: string,
-  parameters: ReadonlyArray<any>,
-  logs: ReadonlyArray<{ type: string; data: unknown }>
+  parameters: ReadonlyArray<unknown>,
+  logs: Array<{ readonly type: string; data: unknown }>,
 ];
 
 function createTestCases(
   type: string,
-  namespace: string = "global"
+  namespace = "global"
 ): ReadonlyArray<TestCase> {
-  let ns = `[${namespace}]`;
+  const ns = `[${namespace}]`;
   return [
     ["zero argument", [], [{ type, data: [ns] }]],
     ["message", ["message"], [{ type, data: [ns, "message"] }]],

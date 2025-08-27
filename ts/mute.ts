@@ -1,4 +1,4 @@
-import { Logger } from "./logger";
+import type { Logger } from "./logger.js";
 
 class MuteLogger implements Logger {
   debug() {
