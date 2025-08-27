@@ -47,4 +47,5 @@ tasks:
   docs:
     desc: Build the docs
     cmds:
+      - task: install
       - bunx typedoc
