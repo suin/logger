@@ -41,7 +41,8 @@ tasks:
     cmds:
       - task: install
       - task: build
-      - npm publish # https://docs.npmjs.com/trusted-publishers
+      - bunx npm --version
+      - bunx npm publish # https://docs.npmjs.com/trusted-publishers
 
   docs:
     desc: Build the docs
